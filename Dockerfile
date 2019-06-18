@@ -85,6 +85,13 @@ RUN set -x \
 						$nginxPackages \
 						gettext-base \
 						patch\
+						libpcre3\
+						libpcre3-dev\
+						zlib1g-dev\
+						openssl\
+						libssl-dev\
+						gcc\
+						make\
 	&& apt-get remove --purge --auto-remove -y apt-transport-https ca-certificates && rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/nginx.list \
 	\
 # if we have leftovers from building, let's purge them (including extra, unnecessary build deps)
